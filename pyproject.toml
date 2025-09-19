@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "chef-agent"
+version = "0.1.0"
+description = "Chef in My Pocket – Agentic MVP"
+authors = ["radoslawfabisiak <fabisiakradoslaw@gmail.com>"]
+readme = "README.md"
+package-mode = false
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+langchain = ">=0.3.27,<0.4.0"
+langgraph = ">=0.6.7,<0.7.0"
+openai = ">=1.108.0,<2.0.0"
+fastapi = ">=0.116.2,<0.117.0"
+uvicorn = ">=0.35.0,<0.36.0"
+pandas = ">=2.3.2,<3.0.0"
+python-dotenv = "^1.1.1"
+chromadb = "^1.1.0"
+langchain-openai = "^0.3.33"
+
+[tool.poetry.scripts]
+chef-agent = "main:run_cli"
+chef-server = "mcp_server.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
